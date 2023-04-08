@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="flex flex-col space-y-2 py-24">
           <div className="max-w-2xl space-y-4">
             <div>
-              <h1 className="big-title">Hey, I'm Scott</h1>
+              <h1 className="big-title">Hey, I&apos;m Scott</h1>
             </div>
             <div>
               <p className="text-lg text-gray-300">

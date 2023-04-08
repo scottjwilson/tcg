@@ -20,9 +20,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="py-2  ">
+    <nav className="py-2">
       <div className="container">
-        <div className="flex justify-between ">
+        <div className="flex justify-between">
           {/* LOGO */}
           <div>
             <h1 className="font-mono font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-radial from-orange-400 to-red-800">
@@ -32,8 +32,8 @@ const Navbar = () => {
           </div>
           {/* Primary Nav */}
           <div className="hidden items-center justify-center md:flex space-x-4">
-            {links.map((link) => (
-              <a className="tracking-wider" href={link.href}>
+            {links.map((link, idx) => (
+              <a key={idx} className="tracking-wider" href={link.href}>
                 {link.text}
               </a>
             ))}
@@ -62,8 +62,10 @@ const Navbar = () => {
       {isMob ? (
         <div className="bg-gray-200 absolute h-full w-full bg-primary md:hidden">
           <div className="flex flex-col p-8 space-y-8">
-            {links.map((link) => (
-              <a href={link.href}>{link.text}</a>
+            {links.map((link, idx) => (
+              <a key={idx} href={link.href}>
+                {link.text}
+              </a>
             ))}
             <a href="/account" className="bg-">
               Account

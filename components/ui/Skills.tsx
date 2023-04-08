@@ -30,8 +30,11 @@ const Skills = () => {
     <section className="container">
       <hr className="my-10 " />
       <div className="grid md:grid-cols-3 justify-center">
-        {skillsList.map((skill) => (
-          <div className="md:py-8 md:space-y-2  md:text-left text-center mb-8">
+        {skillsList.map((skill, idx) => (
+          <div
+            key={idx}
+            className="md:py-8 md:space-y-2  md:text-left text-center mb-8"
+          >
             <h2 className="md:text-5xl text-3xl font-bold">{skill.name}</h2>
             <p className="capitalize">{skill.exp}</p>
           </div>
