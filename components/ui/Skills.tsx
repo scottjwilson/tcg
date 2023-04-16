@@ -1,42 +1,18 @@
-const skillsList = [
-  {
-    name: "HTML",
-    exp: "4 years experience",
-  },
-  {
-    name: "CSS",
-    exp: "4 years experience",
-  },
-  {
-    name: "JavaScript",
-    exp: "4 years experience",
-  },
-  {
-    name: "React",
-    exp: "4 years experience",
-  },
-  {
-    name: "Next.js",
-    exp: "4 years experience",
-  },
-  {
-    name: "Tailwind CSS",
-    exp: "4 years experience",
-  },
-];
+import { getTech } from "@/sanity/sanity-utils";
 
-const Skills = () => {
+const Skills = async () => {
+  const techs = await getTech();
   return (
-    <section className="container">
+    <section className="container my-24 bg-black">
       <hr className="my-10 " />
       <div className="grid md:grid-cols-3 justify-center">
-        {skillsList.map((skill, idx) => (
+        {techs.map((tech, idx) => (
           <div
             key={idx}
             className="md:py-8 md:space-y-2  md:text-left text-center mb-8"
           >
-            <h2 className="md:text-5xl text-3xl font-bold">{skill.name}</h2>
-            <p className="capitalize">{skill.exp}</p>
+            <h2 className="md:text-5xl text-3xl font-bold">{tech.title}</h2>
+            <p className="capitalize">{tech.experience}</p>
           </div>
         ))}
       </div>

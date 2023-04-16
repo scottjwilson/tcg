@@ -14,5 +14,9 @@ body {
 }
 
 .big-title {
-  @apply font-extrabold text-7xl text-white;
+  @apply font-extrabold text-7xl text-gray-300;
+}
+
+.project-card {
+  @apply bg-gray-800 rounded-xl p-4;
 }

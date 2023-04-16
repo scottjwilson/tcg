@@ -1,6 +1,6 @@
 import { Paytone_One, Outfit } from "next/font/google";
 import Navbar from "@/components/ui/layout/Navbar";
-import "./globals.css";
+import "../globals.css";
 
 export const metadata = {
   title: "Create Next App",

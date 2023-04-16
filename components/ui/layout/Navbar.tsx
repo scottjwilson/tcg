@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 import { IoLogoLinkedin, IoLogoTwitter, IoLogoYoutube } from "react-icons/io";
+import Glow from "./Glow";
 const Navbar = () => {
   const [isMob, setMob] = useState(false);
   const links = [
@@ -25,6 +26,7 @@ const Navbar = () => {
         <div className="flex justify-between">
           {/* LOGO */}
           <div>
+            <Glow />
             <h1 className="font-mono font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-radial from-orange-400 to-red-800">
               {/* <span className="font-thin">//</span> */}
               scottwil
