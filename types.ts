@@ -5,6 +5,8 @@ export interface Project {
   mainImage: string;
   mobileImage: string;
   description: string;
+  demo: string;
+  code: string;
   tech: Tech[];
 }
 

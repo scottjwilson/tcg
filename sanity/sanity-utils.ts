@@ -11,6 +11,8 @@ export async function getProjects(): Promise<Project[]> {
         "mainImage": mainImage.asset->url,
         "mobileImage": mobileImage.asset->url,
         "tech": tech[]->{title},
+        demo,
+        code,
         // "description": description[0].children[0].text
         description,
 
@@ -26,34 +28,5 @@ export async function getTech(): Promise<Tech[]> {
         experience,
 
     }`
-  );
-}
-
-export async function getProduct(slug: string): Promise<Project> {
-  return createClient(clientConfig).fetch(
-    groq`*[_type == "product" && slug.current == $slug][0]{
-        _id,
-        title,
-        shortname,
-        "slug": slug.current,
-        desc,
-        feat,
-        price,
-        "gallery": gallery[].asset->url,
-        includes,
-        "relatedProducts": relatedProducts[]->{
-                _id,
-                title,
-                shortname,
-                "slug": slug.current,
-                "mobileImage": mobileImage.asset->url,
-
-              },
-        "mainImage": mainImage.asset->url,
-        "mobileImage": mobileImage.asset->url,
-        "category": category->title,
-        "categorySlug": category->slug
-      }`,
-    { slug }
   );
 }

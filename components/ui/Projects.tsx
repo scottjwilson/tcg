@@ -17,13 +17,7 @@ const Projects = async () => {
             // const tecc = Object.entries(project.tech);
 
             return (
-              <motion.div
-                key={project._id}
-                className="project-card"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.8 }}
-                style={{ x: 1 }}
-              >
+              <div key={project._id} className="project-card">
                 <Image
                   src={project.mainImage}
                   width={570}
@@ -42,15 +36,15 @@ const Projects = async () => {
                   </ul>
 
                   <div className="flex space-x-4">
-                    <a className="btn" href={project.title}>
+                    <a className="btn" href={project.demo}>
                       view project
                     </a>
-                    <a className="btn" href={project.title}>
+                    <a className="btn" href={project.code}>
                       view code
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>

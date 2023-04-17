@@ -49,6 +49,16 @@ export default defineType({
       type: "array",
       of: [{ type: "reference", to: { type: "tech" } }],
     }),
+    defineField({
+      name: "demo",
+      title: "Demo",
+      type: "string",
+    }),
+    defineField({
+      name: "code",
+      title: "Code",
+      type: "string",
+    }),
   ],
 
   preview: {
