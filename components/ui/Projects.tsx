@@ -1,6 +1,4 @@
-"use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { getProjects } from "@/sanity/sanity-utils";
 
 const Projects = async () => {
@@ -20,8 +18,10 @@ const Projects = async () => {
               <div key={project._id} className="project-card">
                 <Image
                   src={project.mainImage}
-                  width={570}
-                  height={400}
+                  width={0}
+                  height={0}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="h-auto w-full"
                   alt={project.title}
                 />
 
@@ -34,7 +34,6 @@ const Projects = async () => {
                       <li key={tecc._id}>{tecc.title}</li>
                     ))}
                   </ul>
-
                   <div className="flex space-x-4">
                     <a className="btn" href={project.demo}>
                       view project

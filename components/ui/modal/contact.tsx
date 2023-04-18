@@ -22,7 +22,7 @@ const Contact = ({ show, onClose }: any) => {
         animate="visible"
         exit="exit"
         onClick={(e) => e.stopPropagation()}
-        className="w-full md:h-1/3 h-full my-32 mx-4 "
+        className="m-auto w-[500px] px-4 py-8 bg-gray-800 rounded"
       >
         <ContactForm />
       </motion.div>

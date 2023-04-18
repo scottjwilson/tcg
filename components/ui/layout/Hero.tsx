@@ -11,7 +11,7 @@ const Hero = () => {
     <>
       <Contact show={isOpen} onClose={toggeContact} />
       <div className="container">
-        <div className="flex flex-col space-y-2 py-24">
+        <div className="flex flex-col space-y-2 mt-24">
           <div className="max-w-2xl space-y-4">
             <div>
               <h1 className="big-title">Hey, I&apos;m Scott</h1>

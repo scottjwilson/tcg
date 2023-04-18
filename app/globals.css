@@ -20,3 +20,15 @@ body {
 .project-card {
   @apply bg-gray-800 rounded-xl p-4;
 }
+
+.input-field {
+  @apply bg-gray-800 text-gray-200 rounded-xl border border-gray-600 px-4 py-2 w-full placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-all ease-in-out;
+}
+
+.contact-btn {
+  @apply text-gray-400 uppercase border-b float-right pt-8 pb-2 tracking-widest hover:text-white hover:border-b-blue-600 transition duration-300 ease-in-out;
+}
+
+.input-style {
+  @apply bg-transparent border-b block w-full  p-4;
+}

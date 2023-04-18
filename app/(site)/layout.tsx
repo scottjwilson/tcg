@@ -1,6 +1,7 @@
 import { Paytone_One, Outfit } from "next/font/google";
 import Navbar from "@/components/ui/layout/Navbar";
 import "../globals.css";
+import Footer from "@/components/ui/layout/Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -31,6 +32,7 @@ export default function RootLayout({
         <div id="contact-modal"></div>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
