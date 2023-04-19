@@ -35,7 +35,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
       <div className="w-full flex flex-col items-start justify-between mt-4">
         <div className="flex space-x-2">
           {project.tech.map((tecc) => (
-            <span className="text-primary font-medium text-xl lg:text-lg md:text-base">
+            <span
+              key={tecc._id}
+              className="text-primary font-medium text-xl lg:text-lg md:text-base"
+            >
               {tecc.title}
             </span>
           ))}
