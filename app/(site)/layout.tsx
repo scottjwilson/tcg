@@ -27,11 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${paytone.variable} ${outfit.variable}`}>
+    <html
+      lang="en"
+      className={`${paytone.variable} ${outfit.variable} dark:bg-red-500`}
+    >
       <body>
         <div id="contact-modal"></div>
         <Navbar />
-        {children}
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

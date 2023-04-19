@@ -1,22 +1,31 @@
 "use client";
 import { useState } from "react";
-
 import { IoLogoLinkedin, IoLogoTwitter, IoLogoYoutube } from "react-icons/io";
 import Glow from "./Glow";
+import Link from "next/link";
+import useThemeSwitcher from "@/hooks/useThemeSwitcher";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import Logo from "./Logo";
 const Navbar = () => {
   const [isMob, setMob] = useState(false);
+  const pathname = usePathname();
+
   const links = [
     {
+      id: 1,
       href: "/",
       text: "home",
     },
     {
-      href: "/",
+      id: 2,
+      href: "/projects",
       text: "projects",
     },
     {
-      href: "/",
-      text: "blog",
+      id: 3,
+      href: "/contact",
+      text: "contact",
     },
   ];
 
@@ -27,17 +36,27 @@ const Navbar = () => {
           {/* LOGO */}
           <div>
             <Glow />
-            <h1 className="font-mono font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-radial from-orange-400 to-red-800">
-              {/* <span className="font-thin">//</span> */}
-              scottwil
-            </h1>
+            <Logo />
           </div>
           {/* Primary Nav */}
+
           <div className="hidden items-center justify-center md:flex space-x-4">
-            {links.map((link, idx) => (
-              <a key={idx} className="tracking-wider" href={link.href}>
+            <Glow />
+
+            {links.map((link) => (
+              <Link
+                className="relative text-lg capitalize"
+                key={link.id}
+                href={link.href}
+              >
+                {link.href === pathname && (
+                  <motion.span
+                    layoutId="underline"
+                    className="absolute left-0 top-full block h-[2px] w-full bg-white rounded-xl "
+                  />
+                )}
                 {link.text}
-              </a>
+              </Link>
             ))}
           </div>
           {/* secondary nav */}
@@ -60,39 +79,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      {/* mob nav */}
-      {isMob ? (
-        <div className="bg-gray-200 absolute h-full w-full bg-primary md:hidden">
-          <div className="flex flex-col p-8 space-y-8">
-            {links.map((link, idx) => (
-              <a key={idx} href={link.href}>
-                {link.text}
-              </a>
-            ))}
-            <a href="/account" className="bg-">
-              Account
-            </a>
-
-            <button
-              onClick={() => setMob(!isMob)}
-              className="flex items-center md:hidden"
-            >
-              x
-            </button>
-          </div>
-        </div>
-      ) : (
-        <></>
-      )}
     </nav>
-    // <nav className="navbar">
-    //   <a href="/">
-    //     <h1 className="text-6xl font-bold">Autofy</h1>
-    //   </a>
-    //   <div className="flex w-1/2 items-center justify-end space-x-8 bg-slate-200">
-
-    //   </div>
-    // </nav>
   );
 };
 
