@@ -25,13 +25,7 @@ const Hero = () => {
               <h1 className="font-mono text-xl text-white">
                 - Lailah Gifty Akita
               </h1>
-              {/* <div>
-                <p className="text-lg text-gray-300">
-                  {" "}
-                  "When your environment is clean you feel happy, Motivated and
-                  Healthy." -Lailah Gifty Akita
-                </p>
-              </div> */}
+
               <div>
                 <button
                   onClick={toggeContact}
