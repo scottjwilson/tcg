@@ -7,11 +7,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Logo from "./Logo";
-import ProjectCard from "../ProjectCard";
-import Contact from "../modal/contact";
+
 import Menu from "../modal/menu";
 const Navbar = () => {
-  const [isMob, setMob] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {

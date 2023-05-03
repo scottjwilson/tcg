@@ -10,7 +10,7 @@ const PageHeader = ({ title, subtitle, heroImage }: PageHeaderProps) => {
   return (
     <header className="bg-cover bg-center h-[50vh] relative">
       <Image
-        src={heroImage}
+        src={heroImage || "/images/hero.jpg"}
         alt={title}
         sizes="100vw"
         fill
