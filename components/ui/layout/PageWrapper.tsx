@@ -12,14 +12,14 @@ const PageWrapper = ({
   className?: string;
 }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 20 }}
-      className={classNames("min-h-screen", className)}
-    >
-      {children}
-    </motion.div>
+    // <motion.div
+    //   initial={{ opacity: 0, y: -20 }}
+    //   animate={{ opacity: 1, y: 0 }}
+    //   exit={{ opacity: 0, y: 20 }}
+    //   className={classNames("min-h-screen", className)}
+    // >
+    <div className={classNames("min-h-screen", className)}>{children}</div>
+    // </motion.div>
   );
 };
 export default PageWrapper;

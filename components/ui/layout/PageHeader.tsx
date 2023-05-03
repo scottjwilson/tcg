@@ -19,7 +19,7 @@ const PageHeader = ({ title, subtitle, heroImage }: PageHeaderProps) => {
       <div className="absolute top-0 left-0 bg-black bg-opacity-20 h-full w-full">
         <div className="flex flex-col justify-center items-center h-full space-y-4">
           <p className="text-sm text-white">{subtitle}</p>
-          <h1 className="text-center font-mono font-semibold text-7xl text-white">
+          <h1 className="text-center font-mono font-semibold md:text-7xl text-5xl text-white">
             {title}
           </h1>
         </div>
