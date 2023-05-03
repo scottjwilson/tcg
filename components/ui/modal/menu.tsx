@@ -5,8 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { dropIn, reveal } from "@/lib/animations";
 import ReactDOM from "react-dom";
 import Overlay from "./overlay";
-import ContactForm from "../forms/ContactForm";
-import Link from "next/link";
+
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
@@ -26,7 +25,7 @@ const Menu = ({ show, onClose, links }: any) => {
         animate="visible"
         exit="exit"
         onClick={(e) => e.stopPropagation()}
-        className="bg-white m-auto rounded-md py-12 w-80 h-[40vh]"
+        className="bg-white m-auto rounded-md py-12 w-80 h-[60vh]"
       >
         <div className="flex flex-col justify-center items-center space-y-8 w-full h-full">
           <div className="w-20">
