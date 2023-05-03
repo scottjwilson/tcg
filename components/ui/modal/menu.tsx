@@ -25,7 +25,7 @@ const Menu = ({ show, onClose, links }: any) => {
         animate="visible"
         exit="exit"
         onClick={(e) => e.stopPropagation()}
-        className="bg-white m-auto rounded-md py-12 w-80 h-[60vh]"
+        className="bg-white m-auto rounded-md py-12 w-80 h-100"
       >
         <div className="flex flex-col justify-center items-center space-y-8 w-full h-full">
           <div className="w-20">
