@@ -1,7 +1,6 @@
-import { getProjects, getServices } from "@/sanity/sanity-utils";
+import { getServices } from "@/sanity/sanity-utils";
 import PageWrapper from "@/components/ui/layout/PageWrapper";
 import PageHero from "@/components/ui/layout/PageHero";
-import ProjectCard from "@/components/ui/ProjectCard";
 import PageContainer from "@/components/ui/layout/PageContainer";
 import Image from "next/image";
 import Link from "next/link";
