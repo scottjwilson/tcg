@@ -9,11 +9,7 @@ const ServicesPage = async () => {
   const servicesData = await getServices();
   return (
     <PageWrapper>
-      <PageHero
-        title="Services Offered"
-        subtitle="- THE CLEANING GOUROU INC -
-"
-      />
+      <PageHero title="Services Offered" />
       <PageContainer className="container">
         {servicesData.map((service) => (
           <div

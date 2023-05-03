@@ -14,7 +14,7 @@ const Projects = ({ projects }: any) => {
           <div key={project._id} className="col-span-1 overflow-hidden">
             <div className="w-full flex flex-col items-center justify-center relative h-full">
               <FramerLink
-                href={project.slug}
+                href="/"
                 target="_blank"
                 className="cursor-pointer overflow-hidden h-full w-full "
                 whileHover={{ scale: 1.3, backgroundColor: "#000" }}

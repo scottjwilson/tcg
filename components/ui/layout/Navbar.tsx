@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <>
       <Menu show={isMenuOpen} onClose={toggleMenu} links={links} />
-      <nav className="py-4 border-b">
+      <nav className="py-4 border-b-2 fixed top-0 bg-white w-full z-40 shadow-md">
         <div className="container">
           <div className="flex justify-between">
             {/* mob button */}
