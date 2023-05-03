@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-gray-900 text-gray-200;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @apply tracking-wide;
 }
 .container {
   @apply max-w-7xl h-full mx-auto px-4 sm:px-6 lg:px-8;
@@ -14,7 +20,7 @@ body {
 }
 
 .big-title {
-  @apply font-extrabold text-7xl text-gray-300;
+  @apply font-extrabold text-7xl;
 }
 
 .input-field {
@@ -22,9 +28,21 @@ body {
 }
 
 .contact-btn {
-  @apply text-gray-400 uppercase border-b float-right pt-8 pb-2 tracking-widest hover:text-white hover:border-b-blue-600 transition duration-300 ease-in-out;
+  @apply shadow-2xl uppercase border bg-black px-4 py-2  text-gray-200 tracking-widest hover:text-white hover:border-teal-700 transition duration-300 ease-in-out;
 }
 
 .input-style {
   @apply bg-transparent border-b block w-full  p-4;
+}
+
+.four-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+.centered-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: capitalize;
 }

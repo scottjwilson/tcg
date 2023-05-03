@@ -5,12 +5,15 @@ type PageHeroProps = {
 
 const PageHero = ({ title, subtitle }: PageHeroProps) => {
   return (
-    <header className="max-w-xl mx-auto h-48 flex flex-col justify-center items-center my-8  px-8 space-y-8">
-      <div>
-        <h1 className="big-title">{title}</h1>
-      </div>
-      <div className="">
-        <p className="text-lg">{subtitle}</p>
+    <header className="bg-pagehero bg-cover bg-center h-[50vh] relative">
+      <div className="absolute top-0 left-0 bg-black bg-opacity-20 h-full w-full">
+        <div className=" max-w-3xl mx-auto text-center flex flex-col justify-center items-center h-full space-y-4 px-8">
+          <p className="text-sm text-white">- THE CLEANING GOUROU INC -</p>
+          <h1 className="font-mono font-semibold md:text-7xl text-5xl text-white">
+            {title}
+          </h1>
+          <p className="text-white font-semibold">{subtitle}</p>
+        </div>
       </div>
     </header>
   );

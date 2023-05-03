@@ -1,8 +1,9 @@
 import blockContent from "./blockContent";
+import hero from "./hero";
 
 import project from "./project";
-import tech from "./tech";
+import service from "./service";
 
-export const schemas = [project, tech, blockContent];
+export const schemas = [hero, project, service, blockContent];
 
 export default schemas;

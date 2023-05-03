@@ -1,32 +1,42 @@
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
-import { Project, Tech } from "@/types";
+import { Project, Service, Tech } from "@/types";
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "project"]{
         _id,
         title,
+        description,
         "slug": slug.current,
         "mainImage": mainImage.asset->url,
-        "mobileImage": mobileImage.asset->url,
-        "tech": tech[]->{title},
-        demo,
-        code,
-        // "description": description[0].children[0].text
-        description,
-
     }`
   );
 }
-export async function getTech(): Promise<Tech[]> {
+
+export async function getServices(): Promise<Service[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "tech"]{
+    groq`*[_type == "service"]{
         _id,
         title,
         "slug": slug.current,
-        experience,
-
+        "mainImage": mainImage.asset->url,
+        description
     }`
+  );
+}
+
+export async function getService(slug: string): Promise<Service> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "service" && slug.current == $slug][0]{
+        _id,
+        title,
+        "slug": slug.current,
+        "mainImage": mainImage.asset->url,
+        "heroImage": heroImage.asset->url,
+        description,
+        serviceDetails
+    }`,
+    { slug }
   );
 }

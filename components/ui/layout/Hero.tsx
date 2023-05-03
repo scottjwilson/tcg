@@ -10,23 +10,36 @@ const Hero = () => {
   return (
     <>
       <Contact show={isOpen} onClose={toggeContact} />
-      <div className="container">
-        <div className="flex flex-col space-y-2 mt-24">
-          <div className="max-w-2xl space-y-4">
-            <div>
-              <h1 className="big-title">Hey, I&apos;m Scott</h1>
-            </div>
-            <div>
-              <p className="text-lg text-gray-300">
-                {" "}
-                Experienced web developer Based in California, USA. Passionate
-                about creating functional, beautiful, user friendly websites.
-              </p>
-            </div>
-            <div>
-              <button onClick={toggeContact} className="border-b animate-pulse">
-                contact me
-              </button>
+
+      <div className="bg-hero bg-cover bg-center  md:h-[800px] h-[600px] relative">
+        <div className="absolute top-0 left-0 bg-black bg-opacity-20 h-full w-full">
+          <div className="flex flex-col space-y-2 justify-center items-center h-full">
+            <div className="max-w-3xl space-y-8 px-8">
+              <div>
+                <h1 className="font-mono text-4xl text-white">
+                  "When your environment is clean you feel Happy, Motivated and
+                  Healthy."
+                  <br />
+                </h1>
+              </div>
+              <h1 className="font-mono text-xl text-white">
+                - Lailah Gifty Akita
+              </h1>
+              {/* <div>
+                <p className="text-lg text-gray-300">
+                  {" "}
+                  "When your environment is clean you feel happy, Motivated and
+                  Healthy." -Lailah Gifty Akita
+                </p>
+              </div> */}
+              <div>
+                <button
+                  onClick={toggeContact}
+                  className="border-b animate-pulse text-white uppercase"
+                >
+                  book now
+                </button>
+              </div>
             </div>
           </div>
         </div>

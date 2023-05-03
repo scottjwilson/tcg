@@ -8,15 +8,13 @@ const ContactPage = () => {
     <PageWrapper>
       <PageHero
         title="Contact"
-        subtitle=" I would love to hear about your project and how I could help.
-              Please fill in the form, and I’ll get back to you as soon as
-              possible."
+        subtitle="Call us now, to receive your tailored made quote. Your business is unique and we understand that, so our services will be tailored to fit right in.
+        "
       />
-      <section className="container">
-        <PageContainer className="max-w-xl mx-auto">
-          <ContactForm />
-        </PageContainer>
-      </section>
+
+      <PageContainer className="container">
+        <ContactForm />
+      </PageContainer>
     </PageWrapper>
   );
 };

@@ -17,7 +17,6 @@ const Skills = async () => {
               <p className="capitalize">{t.experience}</p>
             </div>
           ))}
-          <Glow />
         </div>
       </section>
     </div>
