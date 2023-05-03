@@ -17,7 +17,10 @@ const ServicesPage = async () => {
       />
       <PageContainer className="container">
         {servicesData.map((service) => (
-          <div className="max-w-5xl lg:h-64 mx-auto grid md:grid-cols-2 bg-gray-100 my-6">
+          <div
+            key={service._id}
+            className="max-w-5xl lg:h-64 mx-auto grid md:grid-cols-2 bg-gray-100 my-6"
+          >
             <div className="col-span-1 overflow-hidden">
               <Image
                 src={service.mainImage}

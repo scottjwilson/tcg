@@ -17,8 +17,8 @@ const Hero = () => {
             <div className="max-w-3xl space-y-8 px-8">
               <div>
                 <h1 className="font-mono text-4xl text-white">
-                  "When your environment is clean you feel Happy, Motivated and
-                  Healthy."
+                  &quot;When your environment is clean you feel Happy, Motivated
+                  and Healthy.&quot;
                   <br />
                 </h1>
               </div>
