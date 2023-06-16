@@ -5,15 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { dropIn, reveal } from "@/lib/animations";
 import ReactDOM from "react-dom";
 import Overlay from "./overlay";
-
-import { usePathname } from "next/navigation";
-import Image from "next/image";
-import Quote from "@/components/Quote/Quote";
 import Form from "@/components/QuoteForm/Form";
 
 const Popup = ({ show, onClose }: any) => {
   const [isBrowser, setIsBrowser] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
     setIsBrowser(true);
