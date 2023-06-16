@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Contact from "../modal/contact";
+import Popup from "../modal/popup";
 const Hero = () => {
   const [isOpen, setOpen] = useState(false);
   function toggeContact() {
@@ -9,7 +10,9 @@ const Hero = () => {
 
   return (
     <>
-      <Contact show={isOpen} onClose={toggeContact} />
+      {/* <Contact show={isOpen} onClose={toggeContact} /> */}
+
+      <Popup show={isOpen} onClose={toggeContact} />
 
       <div className="bg-hero bg-cover bg-center  md:h-[800px] h-[600px] relative">
         <div className="absolute top-0 left-0 bg-black bg-opacity-20 h-full w-full">

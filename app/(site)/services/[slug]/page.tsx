@@ -1,10 +1,6 @@
 import { getService } from "@/sanity/sanity-utils";
-import { PortableText } from "@portabletext/react";
-import Image from "next/image";
-import { format } from "date-fns";
 import PageWrapper from "@/components/ui/layout/PageWrapper";
 import PageContainer from "@/components/ui/layout/PageContainer";
-import PageHero from "@/components/ui/layout/PageHero";
 import PageHeader from "@/components/ui/layout/PageHeader";
 import ContactForm from "@/components/ui/forms/ContactForm";
 
