@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, ReactNode } from "react";
 
 interface FormData {
   duration: string;
@@ -23,7 +23,7 @@ const initialData: FormData = {
 
 const FormContext = createContext({});
 
-export const FormProvider = ({ children }) => {
+export const FormProvider = ({ children }: any) => {
   const [data, setData] = useState(initialData);
   const [page, setPage] = useState(0);
 
