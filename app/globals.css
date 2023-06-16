@@ -32,7 +32,7 @@ p {
 }
 
 .input-style {
-  @apply bg-transparent border-b border-black block w-full  px-2 py-4;
+  @apply bg-transparent border-b border-black block w-full px-2 py-4;
 }
 
 .four-grid {
