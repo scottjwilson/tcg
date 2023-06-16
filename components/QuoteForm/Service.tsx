@@ -33,6 +33,7 @@ const Service = ({ service, updateFields, setPage }: ServiceProps) => {
       <div className="btn-wrapper">
         {services.map((service) => (
           <button
+            key={service.name}
             className="quote-btn"
             onClick={() => handleChoice(service.name)}
           >
