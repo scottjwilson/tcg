@@ -43,7 +43,7 @@ const Form = () => {
         method: "POST",
         body: JSON.stringify(data),
       });
-      if (!res.ok) {
+      if (res.ok) {
         throw new Error("Something went wrong!");
       }
     } catch (error) {

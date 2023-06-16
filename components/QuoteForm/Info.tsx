@@ -11,7 +11,7 @@ type InfoProps = InfoInputs & {
 
 const Info = ({ name, email, phone, updateFields }: InfoProps) => {
   return (
-    <Wrapper title="Info">
+    <Wrapper title="Your Business Information">
       <div className="flex flex-col space-y-2">
         <label>Name</label>
         <input
@@ -20,7 +20,8 @@ const Info = ({ name, email, phone, updateFields }: InfoProps) => {
           type="text"
           value={name}
           onChange={(e) => updateFields({ name: e.target.value })}
-          className="input-style"
+          className="info-input"
+          placeholder="Name"
         />
         <label>Phone</label>
         <input
@@ -28,7 +29,8 @@ const Info = ({ name, email, phone, updateFields }: InfoProps) => {
           type="number"
           value={phone}
           onChange={(e) => updateFields({ phone: e.target.value })}
-          className="input-style"
+          className="info-input"
+          placeholder="Phone"
         />
         <label>Email</label>
         <input
@@ -36,7 +38,8 @@ const Info = ({ name, email, phone, updateFields }: InfoProps) => {
           type="email"
           value={email}
           onChange={(e) => updateFields({ email: e.target.value })}
-          className="input-style"
+          className="info-input"
+          placeholder="Email"
         />
       </div>
     </Wrapper>

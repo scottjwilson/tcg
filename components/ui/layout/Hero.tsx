@@ -1,12 +1,18 @@
 "use client";
-import { useState } from "react";
-import Contact from "../modal/contact";
+import { useEffect, useState } from "react";
+
 import Popup from "../modal/popup";
 const Hero = () => {
   const [isOpen, setOpen] = useState(false);
   function toggeContact() {
     setOpen(!isOpen);
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setOpen(true);
+    }, 5000);
+  }, []);
 
   return (
     <>

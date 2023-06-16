@@ -11,12 +11,16 @@ h6,
 p {
   @apply tracking-wide;
 }
+
+label {
+  @apply block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2;
+}
 .container {
   @apply max-w-7xl h-full mx-auto px-4 sm:px-6 lg:px-8;
 }
 
 .btn {
-  @apply shadow-2xl uppercase border bg-black px-4 py-2  text-gray-200 tracking-widest hover:text-white hover:border-teal-700 transition duration-300 ease-in-out;
+  @apply block shadow-2xl uppercase border bg-black px-4 py-2  text-gray-200 tracking-widest hover:text-white hover:border-teal-700 transition duration-300 ease-in-out;
 }
 
 .big-title {
@@ -48,7 +52,7 @@ p {
 }
 
 .quote-btn {
-  @apply bg-black text-white py-2 px-8 hover:border-2 hover:border-white  transition-all ease-in-out;
+  @apply border-black border-2 py-2 px-8 hover:bg-black hover:text-white  transition-colors ease-in-out;
 }
 
 .btn-wrapper {
@@ -57,4 +61,8 @@ p {
 
 .form-control {
   @apply border-2 border-pink-500;
+}
+
+.info-input {
+  @apply appearance-none block w-full bg-gray-100 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white;
 }
