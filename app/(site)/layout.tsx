@@ -3,8 +3,6 @@ import Navbar from "@/components/ui/layout/Navbar";
 import "../globals.css";
 import Footer from "@/components/ui/layout/Footer";
 
-import { FormProvider } from "@/components/QuoteForm/FormContext";
-
 export const metadata = {
   title: "The Cleaning GouRou Inc",
   description: "Professional Cleaning For a Professional You",
@@ -34,9 +32,9 @@ export default function RootLayout({
         <div id="contact-modal"></div>
         <div id="popup-modal"></div>
         <Navbar />
-        <FormProvider>
-          <main className="min-h-screen">{children}</main>
-        </FormProvider>
+
+        <main className="min-h-screen">{children}</main>
+
         <Footer />
       </body>
     </html>

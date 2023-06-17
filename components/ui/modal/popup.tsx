@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { dropIn, reveal } from "@/lib/animations";
 import ReactDOM from "react-dom";
 import Overlay from "./overlay";
+
 import Form from "@/components/QuoteForm/Form";
 
 const Popup = ({ show, onClose }: any) => {
@@ -24,7 +25,7 @@ const Popup = ({ show, onClose }: any) => {
         onClick={(e) => e.stopPropagation()}
         className="bg-white my-auto mx-8 sm:mx-auto rounded-xl w-[600px] h-[500px]"
       >
-        <Form />
+        <Form onClose={onClose} />
       </motion.div>
     </Overlay>
   ) : null;

@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import Popup from "../modal/popup";
 const Hero = () => {
   const [isOpen, setOpen] = useState(false);
-  function toggeContact() {
-    setOpen(!isOpen);
+  function onClose() {
+    setOpen(false);
   }
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Hero = () => {
     <>
       {/* <Contact show={isOpen} onClose={toggeContact} /> */}
 
-      <Popup show={isOpen} onClose={toggeContact} />
+      <Popup show={isOpen} onClose={onClose} />
 
       <div className="bg-hero bg-cover bg-center  md:h-[800px] h-[600px] relative">
         <div className="absolute top-0 left-0 bg-black bg-opacity-20 h-full w-full">
@@ -37,7 +37,7 @@ const Hero = () => {
 
               <div>
                 <button
-                  onClick={toggeContact}
+                  onClick={onClose}
                   className="border-b animate-pulse text-white uppercase"
                 >
                   book now

@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { FormProvider } from "./FormContext";
-import useFormContext from "./useFormContext";
 import Duration from "./Duration";
 import Service from "./Service";
 import Info from "./Info";
@@ -26,7 +24,7 @@ const initialData: FormData = {
   message: "",
 };
 
-const Form = () => {
+const Form = ({ onClose }: any) => {
   const [data, setData] = useState(initialData);
   const [page, setPage] = useState(0);
 
@@ -44,7 +42,8 @@ const Form = () => {
         body: JSON.stringify(data),
       });
       if (res.ok) {
-        throw new Error("Something went wrong!");
+        console.log(data);
+        onClose();
       }
     } catch (error) {
       alert(error);
@@ -69,16 +68,7 @@ const Form = () => {
 
       <div className="flex my-2 justify-center rounded-xl">
         {page === FormTitles.length - 1 ? (
-          <button
-            className="btn"
-            onClick={() => {
-              if (page === FormTitles.length - 1) {
-                handleSubmit(data);
-              } else {
-                setPage((currPage) => currPage + 1);
-              }
-            }}
-          >
+          <button className="btn" onClick={onClose}>
             Submit
           </button>
         ) : (
